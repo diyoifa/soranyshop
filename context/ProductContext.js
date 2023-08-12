@@ -49,7 +49,7 @@ export const ProductProvider = ({ children }) => {
       setLoading(true);
 
       const { data } = await axios.post(
-        `${process.env.API_URL}/api/admin/products/upload_images/${id}`,
+        `${process.env.NEXTAUTH_URL}/api/admin/products/upload_images/${id}`,
         formData,
         {
           headers: {

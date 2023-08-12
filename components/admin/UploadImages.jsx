@@ -41,13 +41,10 @@ const UploadImages = ({ id }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
     const formData = new FormData();
-
     images.forEach((image) => {
       formData.append("image", image);
     });
-
     uploadProductImages(formData, id);
   };
 

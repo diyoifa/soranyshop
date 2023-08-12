@@ -8,9 +8,9 @@ const handler = nc({onError});
 
 dbConnect();
 
-// handler.use(isAuthenticatedUser).get(getAddresses);
-handler.get(getAddresses);
-// handler.use(isAuthenticatedUser).post(newAddress);
-handler.post(newAddress);
+handler.use(isAuthenticatedUser).get(getAddresses);
+// handler.get(getAddresses);
+handler.use(isAuthenticatedUser).post(newAddress);
+// handler.post(newAddress);
 
 export default handler;

@@ -12,8 +12,8 @@
         }
       }
     ],
-    "build": {
-        "postbuild": "chmod -R 755 public/uploads"
-      }
+    "scripts": {
+      "postinstall": "chmod -R 755 public/uploads"
+    }
   }
   

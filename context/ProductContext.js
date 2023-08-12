@@ -32,7 +32,7 @@ export const ProductProvider = ({ children }) => {
   const newProduct = async (product) => {
     try {
       const { data } = await axios.post(
-        `${process.env.API_URL}/api/admin/products`,
+        `${process.env.NEXTAUTH_URL}/api/admin/products`,
         product,
       );
 

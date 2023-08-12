@@ -32,7 +32,7 @@ export const ProductProvider = ({ children }) => {
   const newProduct = async (product) => {
     try {
       const { data } = await axios.post(
-        `${process.env.NEXTAUTH_URL}/api/admin/products`,
+        `${process.env.API_URL}/api/admin/products`,
         product,
       );
 
@@ -70,7 +70,8 @@ export const ProductProvider = ({ children }) => {
   const deleteProduct = async (id) => {
     try {
       const { data } = await axios.delete(
-        `${process.env.API_URL}/api/admin/products/${id}`
+        // `${process.env.API_URL}/api/admin/products/${id}`, id
+        `${process.env.API_URL}/api/admin/products`, id
       );
 
       if (data?.success) {

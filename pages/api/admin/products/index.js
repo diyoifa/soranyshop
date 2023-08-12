@@ -5,7 +5,7 @@ import {
   authorizeRoles,
   isAuthenticatedUser,
 } from "@/backend/middlewares/auth";
-import { newProduct} from "@/backend/controllers/productControllers";
+import { newProduct, deleteProduct} from "@/backend/controllers/productControllers";
 
 const handler = nc({ onError });
 
@@ -25,5 +25,6 @@ dbConnect();
 //   }
 // });
 handler.post(newProduct);
+handler.delete(deleteProduct)
 
 export default handler;

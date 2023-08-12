@@ -123,7 +123,11 @@ export const updateProductWithStockUpdate = async (req, res, next) => {
 
 
 export const deleteProduct = async (req, res, next) => {
-  let product = await Product.findById(req.query.id);
+  console.log("PRODUCTO ID: ", req.query.id )
+  // let product = await Product.findById(req.query.id);
+  let product = await Product.findById(req.body.id);
+  console.log("🚀 ~ file: productControllers.js:129 ~ deleteProduct ~ product:", product)
+  
 
   if (!product) {
     return next(new ErrorHandler("Product not found.", 404));

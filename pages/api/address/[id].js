@@ -13,8 +13,11 @@ const handler = nc({ onError });
 
 dbConnect();
 
-handler.use(isAuthenticatedUser).get(getAddress);
-handler.use(isAuthenticatedUser).put(updateAddress);
-handler.use(isAuthenticatedUser).delete(deleteAddress);
+// handler.use(isAuthenticatedUser).get(getAddress);
+// handler.use(isAuthenticatedUser).put(updateAddress);
+// handler.use(isAuthenticatedUser).delete(deleteAddress);
+handler.get(getAddress);
+handler.put(updateAddress);
+handler.delete(deleteAddress);
 
 export default handler;

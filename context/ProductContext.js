@@ -51,11 +51,11 @@ export const ProductProvider = ({ children }) => {
       const { data } = await axios.post(
         `${process.env.NEXTAUTH_URL}/api/admin/products/upload_images/${id}`,
         formData,
-        // {
-        //   headers: {
-        //     "Content-Type": "multipart/form-data",
-        //   },
-        // }
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
       );
 
       if (data?.data) {

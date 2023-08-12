@@ -11,6 +11,7 @@ const handler = nc({ onError });
 
 dbConnect();
 
-handler.use(isAuthenticatedUser, authorizeRoles("admin")).get(getOrders);
+handler.get(getOrders);
+// handler.use(isAuthenticatedUser, authorizeRoles("admin")).get(getOrders);
 
 export default handler;

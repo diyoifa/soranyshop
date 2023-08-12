@@ -15,8 +15,11 @@ const handler = nc({ onError });
 
 dbConnect();
 
-handler.use(isAuthenticatedUser, authorizeRoles("admin")).get(getUser);
-handler.use(isAuthenticatedUser, authorizeRoles("admin")).put(updateUser);
-handler.use(isAuthenticatedUser, authorizeRoles("admin")).delete(deleteUser);
+// handler.use(isAuthenticatedUser, authorizeRoles("admin")).get(getUser);
+// handler.use(isAuthenticatedUser, authorizeRoles("admin")).put(updateUser);
+// handler.use(isAuthenticatedUser, authorizeRoles("admin")).delete(deleteUser);
+handler.get(getUser);
+handler.put(updateUser);
+handler.delete(deleteUser);
 
 export default handler;

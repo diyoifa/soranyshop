@@ -14,14 +14,14 @@ const Shipping = ({ addresses }) => {
   // console.log("🚀 ~ file: Shipping.jsx:14 ~ Shipping ~ cart:", cart)
   // console.log("🚀 ~ file: Shipping.jsx:12 ~ Shipping ~ cart?.cartItems:", cart?.cartItems)
   const {user} = useContext(AuthContext)
-  // console.log("🚀 ~ file: Shipping.jsx:15 ~ Shipping ~ user:", user)
+  console.log("🚀 ~ file: Shipping.jsx:15 ~ Shipping ~ user:", user)
   const router = useRouter()
   const [shippingInfo, setShippinInfo] = useState("");
 
   const setShippingAddress = (address) => {
     setShippinInfo(address._id);
   };
-  // console.log("🚀 ~ file: Shipping.jsx:15 ~ Shipping ~ shippingInfo:", shippingInfo)
+  console.log("🚀 ~ file: Shipping.jsx:15 ~ Shipping ~ shippingInfo:", shippingInfo)
   
   const checkoutHandler = async () => {
     if (!shippingInfo) {

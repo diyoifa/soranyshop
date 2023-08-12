@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaMapMarker } from 'react-icons/fa';
+import { IoMdMap } from 'react-icons/io';
 
 const UserAddresses = ({ addresses }) => {
   return addresses?.map((address) => (
@@ -12,7 +12,7 @@ const UserAddresses = ({ addresses }) => {
               {/* <i className="fa fa-map-marker-alt">
                 
               </i> */}
-              <FaMapMarker className="text-yellow-500 w-12 h-12 bg-white rounded-full shadow mt-2"/>
+              <IoMdMap className="text-yellow-500 w-6 h-6"/>
             </span>
           </div>
           <figcaption className="text-gray-600">

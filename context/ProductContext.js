@@ -33,7 +33,13 @@ export const ProductProvider = ({ children }) => {
     try {
       const { data } = await axios.post(
         `${process.env.API_URL}/api/admin/products`,
-        product
+        product, {
+          headers: {
+            'Access-Control-Allow-Origin': 'https://soranyshop.vercel.app',
+            'Access-Control-Allow-Methods': 'POST',
+            'Access-Control-Allow-Headers': 'Content-Type',
+          },
+        }
       );
 
       if (data) {
@@ -53,6 +59,9 @@ export const ProductProvider = ({ children }) => {
         formData,
         {
           headers: {
+            'Access-Control-Allow-Origin': 'https://soranyshop.vercel.app',
+            'Access-Control-Allow-Methods': 'POST',
+            'Access-Control-Allow-Headers': 'Content-Type',
             "Content-Type": "multipart/form-data",
           },
         }

@@ -36,6 +36,12 @@ const Shipping = ({ addresses }) => {
           shippingInfo,
           user: user._id,
           orderItems: cart?.cartItems,
+        }, {
+          headers: {
+            'Access-Control-Allow-Origin': 'https://soranyshop.vercel.app',
+            'Access-Control-Allow-Methods': 'POST',
+            'Access-Control-Allow-Headers': 'Content-Type',
+          },
         }
       );
       // console.log("🚀 ~ file: Shipping.jsx:32 ~ checkoutHandler ~ data:", data)

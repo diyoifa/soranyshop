@@ -54,6 +54,13 @@ const OrderItem = ({ order }) => {
                 return total + item.price * item.quantity;
               }, 0)
             }</li>
+            {/* <li>
+              Cuentas:
+              <ul>
+                <li>Nequi: 3143725774</li>
+                <li>Daviplata: 3143725774</li>
+              </ul>
+            </li> */}
           </ul>
         </div>
       </div>

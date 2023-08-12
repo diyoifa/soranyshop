@@ -8,6 +8,7 @@ const handler = nc({ onError });
 
 dbConnect();
 
-handler.use(isAuthenticatedUser).post(createOrder);
+// handler.use(isAuthenticatedUser).post(createOrder);
+handler.post(createOrder);
 
 export default handler;

@@ -7,6 +7,7 @@ import Image from "next/image";
 import CartContext from "@/context/CartContext";
 import { useSession } from "next-auth/react";
 import AuthContext from "@/context/AuthContext";
+import { MdShoppingCart } from 'react-icons/md';
 
 const Header = () => {
   const { user, setUser } = useContext(AuthContext);
@@ -43,7 +44,8 @@ const Header = () => {
               href="/cart"
               className="px-3 py-2 inline-block text-center text-gray-700 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 hover:border-gray-300"
             >
-              <i className="text-blue-400 w-5 fa fa-shopping-cart"></i>
+              {/* <i className="text-blue-400 w-5 fa fa-shopping-cart"></i> */}
+              <MdShoppingCart className=" inline-flex text-blue-400 w-6 h-6" />
               <span className="lg:inline ml-1 text-blue-500">
                (<b className=" ">
                     {cartItems?.length || 0}

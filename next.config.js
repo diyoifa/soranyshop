@@ -9,6 +9,7 @@ const nextConfig = {
     CLOUDINARY_API_KEY: "757483915447198",
     CLOUDINARY_API_SECRET: "KusElMhNOOu6NaVCAZsFshLX_CU",
     NEXTAUTH_SECRET:'1002542235',
+    NEXTAUTH_URL:"http://localhost:3000",
     MONGO_URL: 'mongodb+srv://dani12ca12:Cielo151.@cluster0.bipzlxh.mongodb.net/soranyshop?retryWrites=true&w=majority',
     STRIPE_PUBLIC_KEY: "pk_test_51NZyHJIi7j384Bc118aCTVBGoTQYjVCZw6uxFG85Ih18KzAiIQ0PGw6Pkfadfon1rtLeohVpG6dWE37ODOFysIPM00srMJUVbu",
     STRIPE_PRIVATE_KEY: "sk_test_51NZyHJIi7j384Bc1DkiDvGxPIe8IldZOUgnLSl8S4NKvE8RlIul4AEcmzW20GDJ5tuVYA2mx5FmbWuFJdA4VlXuQ00rFjfznSD",

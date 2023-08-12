@@ -3,7 +3,7 @@ import ErrorHandler from "../utils/errorHandler";
 
 const isAuthenticatedUser = async (req, res, next) => {
   const session = await getSession({ req })
-  // console.log("🚀 ~ file: auth.js:6 ~ isAuthenticatedUser ~ session:", session)
+  console.log("🚀 ~ file: auth.js:6 ~ isAuthenticatedUser ~ session:", session)
 
   if (!session) {
     return next(new ErrorHandler("Inicia sesion para acceder", 401));

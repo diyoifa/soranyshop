@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/.*",
+        "methods": ["GET", "POST", "PUT", "OPTIONS"],
+        "headers": {
+          "Access-Control-Allow-Origin": "https://soranyshop.vercel.app",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Credentials": true
+        }
+      }
+    ]
+  }
+  

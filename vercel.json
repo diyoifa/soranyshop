@@ -11,6 +11,9 @@
           "Access-Control-Allow-Credentials": "true"
         }
       }
-    ]
+    ],
+    "build": {
+        "postbuild": "chmod -R 755 public/uploads"
+      }
   }
   
